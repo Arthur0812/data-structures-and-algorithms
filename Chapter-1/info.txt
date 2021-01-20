@@ -1,0 +1,15 @@
+These lecture notes cover the key ideas involved in designing algorithms. We shall see how
+they depend on the design of suitable data structures, and how some structures and algorithms
+are more efficient than others for the same task. We will concentrate on a few basic tasks,
+such as storing, sorting and searching data, that underlie much of computer science, but the
+techniques discussed will be applicable much more generally.
+We will start by studying some key data structures, such as arrays, lists, queues, stacks
+and trees, and then move on to explore their use in a range of different searching and sorting
+algorithms. This leads on to the consideration of approaches for more efficient storage of
+data in hash tables. Finally, we will look at graph based representations and cover the kinds
+of algorithms needed to work efficiently with them. Throughout, we will investigate the
+computational efficiency of the algorithms we develop, and gain intuitions about the pros and
+cons of the various potential approaches for each task.
+We will not restrict ourselves to implementing the various data structures and algorithms
+in particular computer programming languages (e.g., Java, C , OCaml), but specify them in
+simple pseudocode that can easily be implemented in any appropriate language.

@@ -1,0 +1,18 @@
+When creating software for serious applications, there is usually a need to judge how quickly
+an algorithm or program can complete the given tasks. For example, if you are programming
+a flight booking system, it will not be considered acceptable if the travel agent and customer
+have to wait for half an hour for a transaction to complete. It certainly has to be ensured
+that the waiting time is reasonable for the size of the problem, and normally faster execution
+is better. We talk about the time complexity of the algorithm as an indicator of how the
+execution time depends on the size of the data structure.
+
+Another important efficiency consideration is how much memory a given program will
+require for a particular task, though with modern computers this tends to be less of an issue
+than it used to be. Here we talk about the space complexity as how the memory requirement
+depends on the size of the data structure.
+
+For a given task, there are often algorithms which trade time for space, and vice versa.
+For example, we will see that, as a data storage device, hash tables have a very good time
+complexity at the expense of using more memory than is needed by other algorithms. It is
+usually up to the algorithm/program designer to decide how best to balance the trade-off for
+the application they are designing.

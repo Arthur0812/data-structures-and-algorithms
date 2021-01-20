@@ -1,0 +1,14 @@
+Very often, we are not interested in the actual function C(n) that describes the time 
+complexity of an algorithm in terms of the problem size n, but just its complexity class. This 
+ignores any constant overheads and small constant factors, and just tells us about the 
+principal growth of the complexity function with problem size, and hence something about the 
+performance of the algorithm on large numbers of items.
+
+There is a standard notation, called the Big-O notation, for expressing the fact that
+constant factors and other insignificant details are being ignored. For example, we saw that
+the procedure last(l) on a list l had time complexity that depended linearly on the size n of
+the list, so we would say that the time complexity of that algorithm is O(n). Similarly, linear
+search is O(n). For binary search, however, the time complexity is O(log2 n).
+
+As a representative, we choose the function which gives the class its name – e.g. for O(n) we
+choose the function f(n) = n, for O(log2 n) we choose f(n) = log2 n, and so on.

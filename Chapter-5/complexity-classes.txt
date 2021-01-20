@@ -1,0 +1,10 @@
+These are the most common complexity classes (in order):
+
+- O(1)                  "constant complexity"
+- O(log2 log2 n)        -
+- O(log2 n)             "logarithmic complexity"
+- O(n)                  "linear complexity"
+- O(nlog2 n)            -
+- O(n^2)                "quadratic complexity"
+- O(n^3)                "cubic complexity"
+- O(2^n)                "exponential complexity"

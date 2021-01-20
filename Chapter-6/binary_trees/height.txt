@@ -1,0 +1,45 @@
+The height of a binary tree
+
+Binary trees don’t have a simple relation between their size n and height h. The maximum
+height of a binary tree with n nodes is (n − 1), which happens when all non-leaf nodes have
+precisely one child, forming something that looks like a chain. On the other hand, suppose we
+have n nodes and want to build from them a binary tree with minimal height. We can achieve
+this by ‘filling’ each successive level in turn, starting from the root. It does not matter 
+where we place the nodes on the last (bottom) level of the tree, as long as we don’t start 
+adding to the next level before the previous level is full. Terminology varies, but we shall 
+say that such trees are perfectly balanced or height balanced, and we shall see later why they 
+are optimal for many of our purposes. Basically, if done appropriately, many important 
+tree-based operations (such as searching) take as many steps as the height of the tree, so 
+minimizing the height minimizes the time needed to perform those operations
+
+In fact, it seems fairly obvious that s(h) = 1 + 2 + 4 + · · · + 2h = 2^(h+1) − 1.
+
+(a) The base case applies to the empty tree that has height h = −1, which is consistent
+with s(−1) = 2−1+1 − 1 = 20 − 1 = 1 − 1 = 0 nodes being stored.
+(b) Then for the induction step, a tree of height h + 1 has a root node plus two subtrees of
+height h. By the induction hypothesis, each subtree can store s(h) = 2^(h+1) − 1 nodes,
+so the total number of nodes that can fit in a height h + 1 tree is 1 + 2 × (2^(h+1) − 1) =
+1 + 2^(h+2) − 2 = 2^(h+1)+1 − 1 = s^(h + 1). It follows that if s(h) is correct for the empty
+tree, which it was shown to be in the base case above, then it is correct for all h.
+
+Here, since level h of a tree clearly has 2h nodes,
+we can explicitly add in the 2h+1 nodes of the last level of the height h + 1 tree to give
+    s(h + 1) = s(h) + 2^h+1
+
+
+Also, since a height h + 1 tree is made up of a root node plus two trees of height h
+    s(h + 1) = 1 + 2s(h)
+
+Then subtracting the second equation from the first gives
+    s(h) = 2^h+1 − 1
+
+From this we can get an expression for h
+    h = log2 (s + 1) − 1 ≈ log2 s
+
+Hence a perfectly balanced tree consisting of n nodes has height approximately log2 n.
+This is good, because log2 n is very small, even for relatively large n.
+
+We shall see later how we can use binary trees to hold data in such a way that any search has
+at most as many steps as the height of the tree. Therefore, for perfectly balanced trees we
+can reduce the search time considerably. However, it is not always easy to create perfectly 
+balanced trees, as we shall later see.

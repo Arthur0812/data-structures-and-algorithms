@@ -1,0 +1,36 @@
+These days, we are mostly interested in time complexity. For this, we first have to decide how
+to measure it. Something one might try to do is to just implement the algorithm and run it,
+and see how long it takes to run, but that approach has a number of problems. For one, if
+it is a big application and there are several potential algorithms, they would all have to be
+programmed first before they can be compared. So a considerable amount of time would be
+wasted on writing programs which will not get used in the final product. Also, the machine on
+which the program is run, or even the compiler used, might influence the running time. You
+would also have to make sure that the data with which you tested your program is typical for
+the application it is created for. Again, particularly with big applications, this is not 
+really feasible. This empirical method has another disadvantage: it will not tell you anything 
+useful about the next time you are considering a similar problem.
+
+Therefore complexity is usually best measured in a different way. First, in order to not be
+bound to a particular programming language or machine architecture, it is better to measure
+the efficiency of the algorithm rather than that of its implementation. For this to be 
+possible, however, the algorithm has to be described in a way which very much looks like the 
+program to be implemented, which is why algorithms are usually best expressed in a form of 
+pseudocode that comes close to the implementation language.
+
+What we need to do to determine the time complexity of an algorithm is count the number
+of times each operation will occur, which will usually depend on the size of the problem. The
+size of a problem is typically expressed as an integer, and that is typically the number of 
+items that are manipulated. For example, when describing a search algorithm, it is the number 
+of items amongst which we are searching, and when describing a sorting algorithm, it is the
+number of items to be sorted. So the complexity of an algorithm will be given by a function
+which maps the number of items to the (usually approximate) number of time steps the
+algorithm will take when performed on that many items.
+
+In the early days of computers, the various operations were each counted in proportion to
+their particular ‘time cost’, and added up, with multiplication of integers typically 
+considered much more expensive than their addition. In today’s world, where computers have 
+become much faster, and often have dedicated floating-point hardware, the differences in time 
+costs have become less important. However, we still we need to be careful when deciding to 
+consider all operations as being equally costly – applying some function, for example, can 
+take much longer than simply adding two numbers, and swaps generally take many times longer 
+than comparisons. Just counting the most costly operations is often a good strategy.

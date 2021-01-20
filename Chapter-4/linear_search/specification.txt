@@ -1,0 +1,11 @@
+Given an array 'a' of numbers and an integer 'x', find an integer 'i', such that
+1. if there is no 'j' such that a[j] = x, 'i' is -1,
+2. otherwise, 'i' is any 'j' for which a[j] = x.
+
+Pseudocode:
+
+For i = 0, 1..., n-1,
+    if a[i] is equal to x:
+        then we have a suitable i, and we can terminate returning i.
+If we reach this point,
+    then no suitable i was found, and we can terminate returning -1.

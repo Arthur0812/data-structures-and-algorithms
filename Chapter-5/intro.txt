@@ -1,0 +1,4 @@
+We have already noted that, when developing algorithms, it is important to consider how
+efficient they are, so we can make informed choices about which are best to use in particular
+circumstances. So, before moving on to study increasingly complex data structures and
+algorithms, we first look in more detail at how to measure and describe their efficiency.

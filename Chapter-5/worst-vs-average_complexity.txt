@@ -1,0 +1,12 @@
+Another thing that has to be decided when making efficiency considerations is whether it is
+the average case performance of an algorithm/program that is important, or whether it is
+more important to guarantee that even in the worst case the performance obeys certain rules.
+For many applications, the average case is more important, because saving time overall is
+usually more important than guaranteeing good behaviour in the worst case. However, for
+time-critical problems, such as keeping track of aeroplanes in certain sectors of air space, it
+may be totally unacceptable for the software to take too long if the worst case arises.
+
+Again, algorithms/programs often trade-off efficiency of the average case against efficiency
+of the worst case. For example, the most efficient algorithm on average might have a 
+particularly bad worst case efficiency. We will see particular examples of this when we 
+consider efficient algorithms for sorting and searching.

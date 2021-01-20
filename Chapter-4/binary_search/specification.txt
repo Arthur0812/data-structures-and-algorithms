@@ -1,0 +1,19 @@
+Given an array 'a' of numbers and an integer 'x', find an integer 'i', such that
+1. if there is no 'j' such that a[j] = x, 'i' is -1,
+2. otherwise 'i' is 'j' for which a[j] = x.
+
+Pseudocode:
+
+// This assumes we are given an sorted array a of size a and a key x. 
+While left is less than right,
+    set mid to (left+right)/2, and
+    if x is greater than a[mid],
+        set left to mid+1,
+    otherwise (x is less than or equal to a[mid]),
+        set right to mid,
+    
+// Now, a[left] is the only possible item to hold the value x.
+If a[left] is equal to x,
+    then terminate, returning left.
+Otherwise (a[left] is not x),
+    then terminate, returning -1.

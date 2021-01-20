@@ -1,0 +1,15 @@
+Implementation of trees
+
+The natural way to implement trees is in terms of records and pointers, in a similar way to how
+linked lists were represented as two-cells consisting of a pointer to a list element and a 
+pointer to the next two-cell. Obviously, the details will depend on how many children each 
+node can have, but trees can generally be represented as data structures consisting of a 
+pointer to the root-node content (if any) and pointers to the children sub-trees. The 
+inductive definition of trees then allows recursive algorithms on trees to operate efficiently
+by simply passing the pointer to the relevant root-node, rather than having to pass complete 
+copies of whole trees. How data structures and pointers are implemented in different 
+programming languages will vary, of course, but the general idea is the same.
+A binary tree can be implemented as a data record for each node consisting simply of the
+node value and two pointers to the children nodes. Then MakeTree simply creates a new data
+record of that form, and root, left and right simply read out the relevant contents of the
+record. The absence of a child node can be simply represented by a Null Pointer.
